@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Delete Users</title>
+  </head>
+  <body>
+    <h1>Delete Users</h1>
+    <p>Are you sure you want to delete all users?</p>
+    <form method="POST" action="{{ url_for('delete_users') }}">
+      <input type="submit" value="Yes" />
+    </form>
+  </body>
+</html>

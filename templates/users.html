@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Users</title>
+  </head>
+  <body>
+    <h1>Users</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+        <tr>
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br />
+    <form action="{{ url_for('add_user') }}" method="post">
+      <button type="submit">Add User</button>
+    </form>
+    <br />
+    <form action="{{ url_for('delete_users') }}" method="post">
+      <button type="submit">Delete Table</button>
+    </form>
+  </body>
+</html>
